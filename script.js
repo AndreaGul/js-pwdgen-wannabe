@@ -9,3 +9,10 @@ elementNome.innerHTML = prompt('inserisci il tuo nome');
 elementCognome.innerHTML = prompt('inserisci il tuo cognome');
 elementColore.innerHTML = prompt('inserisci il tuo colore preferito');
 elementNumber.innerHTML = number;
+
+console.log(
+  elementNome.innerHTML +
+    elementCognome.innerHTML +
+    elementColore.innerHTML +
+    number
+);
