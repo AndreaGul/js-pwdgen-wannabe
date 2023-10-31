@@ -5,14 +5,19 @@ const elementNumber = document.getElementById('numero');
 
 const number = 7;
 
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+let randomNumber = getRandomInt(100);
+
 elementNome.innerHTML = prompt('inserisci il tuo nome');
 elementCognome.innerHTML = prompt('inserisci il tuo cognome');
 elementColore.innerHTML = prompt('inserisci il tuo colore preferito');
-elementNumber.innerHTML = number;
+elementNumber.innerHTML = randomNumber;
 
 console.log(
   elementNome.innerHTML +
     elementCognome.innerHTML +
     elementColore.innerHTML +
-    number
+    randomNumber
 );
