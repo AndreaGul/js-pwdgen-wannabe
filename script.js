@@ -10,6 +10,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+//dichiariamo la variabile e la facciamo definire dall'utente
 let nome = prompt('inserisci il tuo nome');
 let cognome = prompt('inserisci il tuo cognome');
 let colore = prompt('inserisci il tuo colore preferito');
