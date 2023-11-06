@@ -1,30 +1,29 @@
-const elementNome = document.getElementById('nome');
-const elementCognome = document.getElementById('cognome');
-const elementColore = document.getElementById('colore');
-const elementNumber = document.getElementById('numero');
+'use strict';
 
+const elementPassword = document.getElementById('password');
+
+//numero fisso
 const number = 7;
 
-//funzione per prendere un numero casuale
+//funzione per generare un numero casuale
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+let nome = prompt('inserisci il tuo nome');
+let cognome = prompt('inserisci il tuo cognome');
+let colore = prompt('inserisci il tuo colore preferito');
 //do a randomNumber un valore casuale che va da 0  a 99
 let randomNumber = getRandomInt(100);
 
-// chiedo all'utente di inserire i dati che vengono chiesti
-elementNome.innerHTML = prompt('inserisci il tuo nome');
-elementCognome.innerHTML = prompt('inserisci il tuo cognome');
-elementColore.innerHTML = prompt('inserisci il tuo colore preferito');
+//creo un variabile password
+let password;
 
-// do a elementNumber il valore di randomNumber
-elementNumber.innerHTML = randomNumber;
+//unisco tutte le varibili per crare la password
+password = nome + cognome + colore + randomNumber;
 
-// mostra gli elementi all'interno della console
-console.log(
-  elementNome.innerHTML +
-    elementCognome.innerHTML +
-    elementColore.innerHTML +
-    randomNumber
-);
+//do a elementPassword iil valore di passwrod cosi da farlo visualizzare nell'html
+elementPassword.innerHTML = password;
+
+//visualizzo password nella console
+console.log(password);
